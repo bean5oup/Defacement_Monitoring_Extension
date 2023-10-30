@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>options | Defacement Monitorring</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/default.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class='nav_top'>
+            <ul>
+                <li class='menuBtn navRemove'>
+                    <div>삭제</div>
+                </li>
+                <li class='menuBtn navAdd'>
+                    <div>등록</div>
+                </li>
+            </ul>
+            
+        </div>
+        <div class='window'>
+            <div class='nav_left'>
+                <div class='searchBox'>
+                    <input type='text' id='searchCode' placeholder='이름 또는 URL'></input>
+                </div>
+                <div class='codeBox'>
+                    <table>
+                        <colgroup>
+                            <col style='width: 10%;'>
+                            <col style='width: 10%;'>
+                            <col style='width: 70%;'>
+                            <col style='width: 10%;'>
+                        </colgroup>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class='main_pane'>
+                <div id="leftContainer" class='container'>
+                    <div class='info_pane'>
+                        <div class='infoName'>
+                            <input type='text' placeholder='이름'></input>
+                        </div>
+                        <div style='margin: 0 2rem 0 2rem; height: 30%;'>
+                            <div class='info infoURL'>
+                                <div class='gray font20'>URL</div>
+                                <span class='gray font20'>|</span>
+                                <input type='text' placeholder='URL 입력'></input>
+                            </div>
+                            <div class='info infoInitiator'>
+                                <div class='gray font20'>ORIGIN</div>
+                                <span class='gray font20'>|</span>
+                                <input type='text' placeholder='Initiator 입력(자동)'></input>
+                            </div>
+                            <div class='info infoIP'>
+                                <div class='gray font20'>IP</div>
+                                <span class='gray font20'>|</span>
+                                <input type='text' placeholder='IP 입력(자동)'></input>
+                            </div>
+                            <div class='infoContent'>
+                                <div class='info infoHash'>
+                                    <div class='gray font20'>HASH</div>
+                                    <span class='gray font20'>|</span>
+                                    <input type='text' readonly></input>
+                                </div>
+                                <div class='info infoContentSize'>
+                                    <div class='gray font20'>Content Size</div>
+                                    <span class='gray font20'>|</span>
+                                    <input type='text' readonly></input>
+                                </div>
+                                <div class='info infoRscIP'>
+                                    <div class='gray font20'>Resource IP</div>
+                                    <span class='gray font20'>|</span>
+                                    <input type='text' readonly></input>
+                                </div>
+                                <div class='info infoMethod'>
+                                    <div class='gray font20'>Method</div>
+                                    <span class='gray font20'>|</span>
+                                    <input type='text' readonly></input>
+                                </div>
+                                <div class='info infoStatusCode'>
+                                    <div class='gray font20'>Status Code</div>
+                                    <span class='gray font20'>|</span>
+                                    <input type='text' readonly></input>
+                                </div>
+                                <div class='info infoType'>
+                                    <div class='gray font20'>Type</div>
+                                    <span class='gray font20'>|</span>
+                                    <input type='text' readonly></input>
+                                </div>
+                                <div class='info infoLastAccessTime'>
+                                    <div class='gray font20'>Last Access</div>
+                                    <span class='gray font20'>|</span>
+                                    <input type='text' readonly></input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='infoName Resource'>
+                            <span class='gray font20'>Resource(<span class='cnt'>0</span>)</span>
+                            <div class='gray font20 btnUpdate Resource' style='margin-left: auto;'>UPDATE</div>
+                        </div>
+                        <div class='scrollOver'>
+                            <table>
+                                <colgroup>
+                                    <col style='width: 1rem;'>
+                                    <col style='width: 6rem;'>
+                                    <col style='width: 6rem;'>
+                                    <col style='width: 7rem;'>
+                                    <col style='width: 100%;'>
+                                </colgroup>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class='infoName'>
+                            <span class='gray font20'>Exception Regex</span>
+                            <div class='gray font20 btnUpdate Regex' style='margin-left: auto;'>UPDATE</div>
+                        </div>
+                        <div class='regex'>
+                            <textarea placeholder='https://127.0.0.1/example/.*.png$'></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="rightContainer" class='container'>
+                    <iframe src=''>
+                    </iframe>
+                </div> -->
+            </div>
+        </div>
+    <script src="/lib/ThirdParty/md5.min.js"></script>
+    <script src="panel.js"></script>
+    <script type='module' src='./options.js'></script>
+    </body>
+</html>

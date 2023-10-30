@@ -1,0 +1,39 @@
+{
+    "key": "AAAAB3NzaC1yc2EAAAADAQABAAAAgQC3zQx/ws4/W2CeuR3paieWEMUmEb2yYfSyXETjBASkaGaSRl0hmAQTIYojmb46Jfv7GMN4aP95RGrFSakoP5q3dQ9oIMZnkc2j0t+QW3c0IuHSWmH95ID+QQhLbQcSnQsb/dNMxxTQ66Hd6lWTIiVqXaRbjFzKX6ge5IUQ/Uiztw==",
+    "manifest_version": 3,
+    "name": "Defacement Monitoring",
+    "description": "Monitor defacement attacks using devtools api",
+    "version": "23.10.04",
+    "author": "bean5oup",
+    "devtools_page": "pages/devtools.html",
+    "action": {
+        "default_title": "Controller",
+        // "default_popup": "pages/popup.html"
+        "default_popup": "popup/controller.html"
+    },
+    "icons": {
+        "128": "favicon.ico"
+    },
+    "background": {
+        "service_worker": "service-worker.js",
+        "type": "module"
+    },
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "tabs",
+        "webRequest",
+        "offscreen",
+        "tts"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "declarative_net_request" : {
+        "rule_resources" : [{
+            "id": "ruleset_1",
+            "enabled": true,
+            "path": "assets/rules/rule_remove_csp.json"
+        }]
+    }
+}
